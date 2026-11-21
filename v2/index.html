@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LIU ZILI’s electrical engineering portfolio and side-by-side MATLAB/Simulink results for low-speed rotor position estimation.">
+  <title>LIU ZILI | Electrical Engineering and Automation</title>
+  <link rel="icon" href="assets/ipmsm-cross-section.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">LIU ZILI</a>
+      <nav aria-label="Main navigation">
+        <a href="#project">Project</a>
+        <a href="#results">Results</a>
+        <a href="#skills">Skills</a>
+        <a href="#references">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main" tabindex="-1">
+    <section class="intro" aria-labelledby="name">
+      <h1 id="name">LIU ZILI</h1>
+      <p class="discipline">Electrical Engineering and Automation</p>
+      <p class="intro-text">My undergraduate thesis investigates rotor position estimation in an interior permanent magnet synchronous motor at standstill and low speed.</p>
+      <a class="button" href="#results">View simulation results</a>
+    </section>
+
+    <section class="section" id="project" aria-labelledby="project-heading">
+      <h2 id="project-heading">Project</h2>
+      <div class="project-grid">
+        <article class="panel project-details" aria-labelledby="thesis-title">
+          <p class="label">Undergraduate thesis</p>
+          <h3 id="thesis-title">Low-Speed Rotor Position Estimation for an Interior Permanent Magnet Synchronous Motor Using Pulsating High-Frequency Signal Injection</h3>
+          <ul class="contributions">
+            <li>I built an interior permanent magnet synchronous motor (IPMSM) simulation in MATLAB/Simulink.</li>
+            <li>I implemented separate modules for current signal processing and rotor electrical angle estimation.</li>
+            <li>I compared the estimated angle with the model reference with high-frequency injection enabled and disabled.</li>
+          </ul>
+        </article>
+        <figure class="panel motor-figure">
+          <img src="assets/ipmsm-cross-section.png" width="1395" height="1398"
+            alt="Cross section of an IPMSM showing stator slots around a rotor with embedded magnets.">
+          <figcaption>
+            <strong>IPMSM cross section</strong>
+            <p>Structural reference from <a href="https://doi.org/10.3390/en15144956">Caruso et al., <cite>Energies</cite> (2022), Fig. 2</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="results" aria-labelledby="results-heading">
+      <div class="section-heading">
+        <h2 id="results-heading">Simulation Results</h2>
+        <p class="simulation-meta"><span>MATLAB/Simulink</span><span class="measurement">0–0.05 s</span></p>
+      </div>
+      <p class="section-description">The two runs show phase currents, rotor speed, rotor electrical angle and wrapped angle error over the same simulation interval.</p>
+      <div class="comparison-grid">
+        <article class="panel plot" aria-labelledby="injection-on-heading">
+          <h3 id="injection-on-heading">Injection On</h3>
+          <figure>
+            <img src="assets/injection-on.png" width="1298" height="1352" loading="lazy"
+              alt="With injection on, the phase currents show high-frequency oscillations and rotor speed rises. The estimated electrical angle approaches the model reference, and the wrapped error falls close to zero.">
+            <figcaption>
+              <p>The estimated electrical angle approaches the model reference, and the wrapped angle error falls close to zero over the displayed interval.</p>
+              <a href="assets/injection-on.png">Open full-size injection-on plot</a>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="panel plot" aria-labelledby="injection-off-heading">
+          <h3 id="injection-off-heading">Injection Off</h3>
+          <figure>
+            <img src="assets/injection-off.png" width="1308" height="1026" loading="lazy"
+              alt="With injection off, the phase currents are smooth and rotor speed rises. The estimated electrical angle stays at zero while the reference stays near one radian and the wrapped error remains close to minus one radian.">
+            <figcaption>
+              <p>The estimated electrical angle stays at zero over the displayed interval, while the model reference remains near <span class="measurement">1 rad</span>.</p>
+              <a href="assets/injection-off.png">Open full-size injection-off plot</a>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-grid" id="skills" aria-label="Skills and expertise">
+      <div class="panel skills-panel">
+        <h2>Technical Skills</h2>
+        <dl class="skills-list">
+          <div>
+            <dt>MATLAB/Simulink modeling</dt>
+            <dd>Built the IPMSM model and checked simulated signals at the module outputs.</dd>
+          </div>
+          <div>
+            <dt>Current signal processing</dt>
+            <dd>Implemented the current processing module and compared phase current waveforms across the two runs.</dd>
+          </div>
+          <div>
+            <dt>Rotor electrical angle estimation</dt>
+            <dd>Implemented the estimator and used wrapped angle error to compare its output with the model reference.</dd>
+          </div>
+          <div>
+            <dt>Simulation data analysis</dt>
+            <dd>Read the current, speed and position traces together to interpret the results under the tested conditions.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="panel skills-panel">
+        <h2>Areas of Expertise</h2>
+        <dl class="skills-list">
+          <div>
+            <dt>Low-speed motor position estimation</dt>
+            <dd>I break the task into motor modeling, current response processing and angle estimation, then check the output at each step.</dd>
+          </div>
+          <div>
+            <dt>Comparative simulation for motor control</dt>
+            <dd>I compare injection-on and injection-off runs against the model reference, using the wrapped angular error to assess tracking.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="references" aria-labelledby="references-heading">
+      <h2 id="references-heading">References</h2>
+      <div class="panel references">
+        <div>
+          <h3>IPMSM cross section</h3>
+          <p>Figure 2 from Caruso et al., <cite>Energies</cite> (2022), illustrates the motor structure.</p>
+          <p class="resource-links">
+            <a href="https://doi.org/10.3390/en15144956">Read the paper</a>
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>
+          </p>
+        </div>
+        <div>
+          <h3>Signal injection in motulator</h3>
+          <p>Aalto Electric Drives’ third-party Python example uses square-wave injection and a phase-locked loop.</p>
+          <p class="resource-links">
+            <a href="https://aalto-electric-drives.github.io/motulator/drive_examples/signal_inj/plot_2kw_ipmsm_signal_inj.html">View the example</a>
+            <a href="assets/plot_2kw_ipmsm_signal_inj.py" download>Download Python source</a>
+            <a href="assets/LICENSE-motulator.txt">MIT license</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>LIU ZILI</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
